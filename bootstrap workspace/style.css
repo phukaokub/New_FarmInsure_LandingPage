@@ -3,30 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 } */
-/* .btn{
+.btn1{
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    transition: all 0.4s;
+    color: rgb(83, 248, 83);
+    outline: none;
+    border: 2px solid rgb(83, 248, 83);
     background-color: transparent;
-    color: black;
-    border: 2px solid rgb(46, 204, 113);
 }
-.btn:hover{
-    background-color:rgb(46, 204, 113) ;
-    transition: all;
-    border: 2px solid white;
-} */
-/* .btn{
-    background-color: lightgreen;
-    padding: 10px;
-    border-radius: 15px;
-} */
+.btn1:hover{
+    border-radius: 10px;
+    padding: 7px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color:rgb(11, 200, 11);
+} 
 .navbar-brand{
     font-size: 2rem;
     color: black;
 }
+.nav-item{
+    font-weight: 500;
+    padding-left: 35px;
+}
 #welcome{
     font-weight: bold;
-    font-size: 6vw;
-    background-image: url(picture/farming.png);
-    width: 100%;
+    font-size: 3vw;
+    background-image: url(picture/Hero_BG.svg)
+    width: 100vw;
     height: 50vw;
     /* 1440 x 720 is default so height follow the width of device*/
 }
