@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-size: 2rem;
+    color: black;
+}
+.brn1{
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 15px;
+}
+#welcome{
+    font-weight: bolder;
+    font-size: 300%;
+}
