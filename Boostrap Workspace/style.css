@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* <!-- =============================NAVBAR================================ --> */
 .nav-item{
     font-weight:500 ;
     padding-left: 35px;
@@ -19,5 +20,30 @@
     background-color:rgb(46, 204, 113) ;
     transition: all;
     border: 2px solid white;
-
 }
+/* <!-- =============================SECTION ขั้นตอนในการแจ้งรายงานความเสียหายง่ายๆ================================ --> */
+.ceta{
+    min-width: 400px ;
+    border: none;
+}
+.con2{
+    margin: auto;
+    padding: 0px 100px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con2 h2{
+    padding: 1rem;
+}
+.con2 p { 
+    padding: 0rem;
+}
+.Report1{
+    width: 400px;
+    border: 3px solid rgb(46, 204, 113);
+    margin: 10px;
+}
+
+/* <!-- =============================SECTION ข้อมูลเพิ่มเติม================================ --> */
