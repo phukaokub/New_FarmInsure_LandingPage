@@ -1,8 +1,8 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&family=IBM+Plex+Sans+Thai&display=swap');
+
+*{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
 .btn1{
     border-radius: 10px;
     padding: 5px;
@@ -25,16 +25,35 @@
 .navbar-brand{
     font-size: 2rem;
     color: black;
+    /* font-family: 'Anuphan', sans-serif; */
+    /* font-family: 'IBM Plex Sans Thai', sans-serif; */
 }
 .nav-item{
     font-weight: 500;
     padding-left: 35px;
 }
 #welcome{
-    font-weight: bold;
-    font-size: 3vw;
-    background-image: url(picture/Hero_BG.svg)
+    font-weight: bolder;
+    font-size: 4vw;
+    /* background-image: url(picture/Hero_BG.svg) */
     /* width: 100vw; */
     /* height: 50vw; */
     /* 1440 x 720 is default so height follow the width of device*/
+}
+.intro_card{
+    text-align: center;
+    border-radius: 50px;
+    border-width: thin;
+    border: solid rgb(83, 248, 83);
+    box-shadow: 5% 5% 10% rgb(11, 200, 11);
+    /* border not work */
+}
+#hero{
+    background-color: rgba(240, 240, 240, 0.973);
+}
+#desc{
+    font-size: 100%;
+}
+#Step_Laningpage{
+    font-size: 70px;
 }
