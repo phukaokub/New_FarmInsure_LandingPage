@@ -34,7 +34,7 @@
     font-weight: bold;
     font-size: 3vw;
     background-image: url(picture/Hero_BG.svg)
-    width: 100vw;
-    height: 50vw;
+    /* width: 100vw; */
+    /* height: 50vw; */
     /* 1440 x 720 is default so height follow the width of device*/
 }
