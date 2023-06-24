@@ -1,18 +1,32 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+} */
+/* .btn{
+    background-color: transparent;
+    color: black;
+    border: 2px solid rgb(46, 204, 113);
 }
+.btn:hover{
+    background-color:rgb(46, 204, 113) ;
+    transition: all;
+    border: 2px solid white;
+} */
+/* .btn{
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 15px;
+} */
 .navbar-brand{
     font-size: 2rem;
     color: black;
 }
-.brn1{
-    background-color: lightgreen;
-    padding: 10px;
-    border-radius: 15px;
-}
 #welcome{
-    font-weight: bolder;
-    font-size: 300%;
+    font-weight: bold;
+    font-size: 6vw;
+    background-image: url(picture/farming.png);
+    width: 100%;
+    height: 50vw;
+    /* 1440 x 720 is default so height follow the width of device*/
 }
