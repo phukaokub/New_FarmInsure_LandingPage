@@ -24,7 +24,7 @@
 /* <!-- =============================SECTION ขั้นตอนในการแจ้งรายงานความเสียหายง่ายๆ================================ --> */
 .ceta{
     min-width: 400px ;
-    border: 1px solid red;
+    border: none;
 }
 .con2{
     margin: auto;
@@ -60,14 +60,26 @@
 }
 .pic1{
     aspect-ratio:  561 / 707;
-    width: 235px;
-    height: 330px;
+    width: 230px;
+    height: 350px;
+    border: none;
 }
 .pic2{
     aspect-ratio:  588 / 341;
     width: 500px;
-    height: 330px;
+    height: 350px;
+    border: none;
 }
+/* .infopic2{
+    width: 500px;
+    height: 330px;
+    border: 1px solid rgb(21, 27, 143);
+    justify-content: left;
+    display: flex;
+    align-items: center;
+} */
+
+
 /* <!-- =============================SECTION การถ่ายภาพแจ้งรายงานความเสียหาย================================ --> */
 .pic3{
     aspect-ratio:336/680;
@@ -82,10 +94,10 @@
     display: flex;
     align-items: center;
     height: 500px;
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
 }
 .text01{
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
     width: 500px;
 }
 /* <!-- =============================SECTION การแจ้งรายงานความเสียหาย================================ --> */
@@ -102,10 +114,9 @@
     display: flex;
     align-items: center;
     height: 500px;
-    border: 1px solid rgb(21, 27, 143);
 }
 .text02{
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
     width: 500px;
 }
 /* <!-- =============================SECTION การกรอกข้อมูล================================ --> */
@@ -114,16 +125,17 @@
     display: flex;
     align-items: center;
     height: 500px;
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
 }
 .text03{
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
     width: 500px;
 }
 .pic5{
     aspect-ratio:336/680;
     width: 500;
     height: 500px;
+    border: 1px solid red;
 }
 /* <!-- =============================SECTION การถ่ายรูปและเลือกแปลง================================ --> */
 .pic6{
@@ -132,7 +144,7 @@
     height: 500px;
 }
 .text04{
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
     width: 500px;
 }
 .context4{
@@ -140,7 +152,7 @@
     display: flex;
     align-items: center;
     height: 500px;
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
 }
 /* <!-- =============================SECTION การเลือกแปลงเสียหาย================================ --> */
 .pic7{
@@ -149,7 +161,7 @@
     height: 500px;
 }
 .text05{
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
     width: 500px;
 }
 .context5{
@@ -157,7 +169,7 @@
     display: flex;
     align-items: center;
     height: 500px;
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
 }
 /* <!-- =============================SECTION การวาดขอบแปลง================================ --> */
 .pic8{
@@ -166,13 +178,49 @@
     height: 500px;
 }
 .text06{
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
+    height: 500px;
     width: 500px;
 }
 .context6{
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 700px;
+    border: none;
+}
+/* <!-- =============================SECTION การวาดแปลง================================ --> */
+.pic9{
+    aspect-ratio:336/680;
+    width: 500;
+    height: 500px;
+}
+.text07{
+    border: none;
+    width: 500px;
+}
+.context7{
     justify-content: right;
     display: flex;
     align-items: center;
     height: 500px;
-    border: 1px solid rgb(21, 27, 143);
+    border: none;
+}
+/* <!-- =============================SECTION หน้าบันทึกแปลง================================ --> */
+.pic10{
+    aspect-ratio:336/680;
+    width: 500;
+    height: 500px;
+}
+.text08{
+    border: none;
+    width: 500px;
+}
+.context8{
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    height: 500px;
+    border: none;
 }
