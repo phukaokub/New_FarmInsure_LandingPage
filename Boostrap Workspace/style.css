@@ -78,7 +78,16 @@
     display: flex;
     align-items: center;
 } */
-
+/* .bgcolor1{
+    border: 2px solid rgb(255, 0, 0);
+    width: 300;
+    height: 300;
+}
+.bgcolor2{
+    border: 2px solid rgb(255, 0, 0);
+    width: 300;
+    height: 300;
+} */
 
 /* <!-- =============================SECTION การถ่ายภาพแจ้งรายงานความเสียหาย================================ --> */
 .pic3{
