@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
 .greenbg{
     border: none;
     background-color:rgba(168, 202, 48, 0.2) ;
@@ -66,6 +70,10 @@
     background-color: transparent;
     color: rgb(0, 0, 0);
     border: 2px solid rgb(34, 82, 54);
+}
+.textbtn{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 .btn:hover{
     background-color:rgb(46, 204, 113) ;
@@ -139,6 +147,10 @@
 .text01{
     border: none;
     width: 500px;
+}
+
+.infotest{
+    border: 2px solid red;
 }
 /* <!-- =============================SECTION การแจ้งรายงานความเสียหาย================================ --> */
 .pic4{
