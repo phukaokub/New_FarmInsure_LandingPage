@@ -3,6 +3,12 @@
 *{
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+  }
+
 .btn1{
     border-radius: 10px;
     padding: 5px;
