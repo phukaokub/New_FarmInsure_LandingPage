@@ -176,7 +176,7 @@ html{
 }
 /* <!-- =============================SECTION การกรอกข้อมูล================================ --> */
 .context3{
-    justify-content: right;
+    justify-content: left;
     display: flex;
     align-items: center;
     height: 500px;
@@ -219,7 +219,7 @@ html{
     width: 500px;
 }
 .context5{
-    justify-content: right;
+    justify-content: left;
     display: flex;
     align-items: center;
     height: 500px;
@@ -255,7 +255,7 @@ html{
     width: 500px;
 }
 .context7{
-    justify-content: right;
+    justify-content: left;
     display: flex;
     align-items: center;
     height: 500px;
