@@ -8,27 +8,6 @@
     height: 400px;
     width: 100%;
   }
-
-.btn1{
-    border-radius: 10px;
-    width: 125px;
-    padding: 5px;
-    /* outline: none;
-    border: none;
-    transition: all 0.4s; */
-    /* color: rgb(83, 248, 83); */
-    /* outline: none; */
-    /* border: 2px solid rgb(83, 248, 83); */
-    /* background-color: transparent; */
-}
-/* .btn1:hover{
-    border-radius: 10px;
-    padding: 5px;
-    color: white;
-    outline: none;
-    border: 2px solid rgb(11, 200, 11);
-    background-color:rgb(11, 200, 11);
-}  */
 .navbar-brand{
     font-size: 2rem;
     color: black;
@@ -78,7 +57,7 @@
 #desc{
     font-size: 100%;
 }
-#Step_Laningpage{
+#Step_Landingpage{
     font-size: 70px;
 }
 #video_promoting{
