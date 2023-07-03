@@ -11,6 +11,7 @@
 
 .btn1{
     border-radius: 10px;
+    width: 125px;
     padding: 5px;
     outline: none;
     border: none;
@@ -22,10 +23,10 @@
 }
 .btn1:hover{
     border-radius: 10px;
-    padding: 7px;
+    padding: 5px;
     color: white;
     outline: none;
-    border: none;
+    border: 2px solid rgb(11, 200, 11);
     background-color:rgb(11, 200, 11);
 } 
 .navbar-brand{
