@@ -3,6 +3,12 @@
 *{
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+  }
+
 .btn1{
     border-radius: 10px;
     padding: 5px;
@@ -41,19 +47,20 @@
     /* 1440 x 720 is default so height follow the width of device*/
 }
 .intro_card{
-    width: 190px;
-    height: 190px;
+    width: 220px;
+    height: 220px;
+    font-size: medium;
     margin:auto;
     text-align: center;
     border-radius: 25px;
     border-width: thin;
     border: solid rgb(83, 248, 83);
     box-shadow: 5% 5% 10% rgb(11, 200, 11);
-    background-color: aqua;
+    /* background-color: aqua; */
     /* border not work */
 }
 #first_box{
-    padding: 10px 0px;
+    padding: 10px 10px;
     margin-bottom: 5%;
 }
 #mid_box{
@@ -74,9 +81,32 @@
     font-size: 70px;
 }
 #video_promoting{
-    background-color: blue;
+    /* background-color: blue; */
     justify-content: center;
     display: flex;
     position: relative;
     aspect-ratio: 16/9 ;
 }
+
+/* Custom styles for the FAQ section [not work] */
+/* .faq-section {
+    background-color: rgba(0, 128, 0, 0.2);
+    padding: 50px;
+    border-radius: 10px;
+  }
+  
+  .faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    color: #006400;
+  }
+  
+  .faq-answer {
+    display: none;
+    margin-bottom: 20px;
+    color: #006400;
+  }
+  
+  .faq-answer.show {
+    display: block;
+  } */
