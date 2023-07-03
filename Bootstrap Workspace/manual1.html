@@ -11,52 +11,157 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-      crossorigin="anonymous"
-    ></script>
-    <h1>Hi</h1>
-    <img src="picture/Rectangle 2.svg" class="img-fluid" alt="..." />
-    <div class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-xxl-2 col-lg-3 col-sm-12 d-none d-sm-block sticky-top fixed-top border-end">
-          <div class="sticky-top fixed-top ">
-            <nav class="flex-column align-items-stretch sticky-top fixed-top">
-              <div class="align-items-start">
-                <div
-                  class="nav flex-column flex-sm-row mb-sm-3 mb-lg-0 nav-pills justify-content-center align-items-stretch"
-                  id="v-pills-tab"
-                  role="tablist"
-                  aria-orientation="vertical"
-                  style="background-color: white;"
-                >
-                  <button
-                    class="nav-link active flex-grow-1"
-                    id="manual-tab"
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-1" href="#">
+          <img
+            src="picture/logo มะลิซ้อน/Artboard 4@4x.png"
+            alt="Logo"
+            width="30"
+            class="d-inline-block align-text-top"
+          />
+          มะลิซ้อน
+        </a>
+        <!-- button for phone only -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar1"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+          <!-- mid navbar -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">หน้าแรก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">วิธีการใช้งาน</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <!-- Add the d-lg-none class to hide on lg screens -->
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#collapseMenu"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseMenu"
+                >เอกสารและข้อตกลง</a
+              >
+            </li>
+            <div class="collapse navbar-collapse" id="collapseMenu">
+              <div class="nav" id="v-pills-tab" role="tablist">
+                <li class="nav-item d-lg-none">
+                  <a
+                    class="nav-link"
+                    id="manual-tab-header"
                     data-bs-toggle="pill"
                     data-bs-target="#manual"
                     type="button"
                     role="tab"
                     aria-controls="manual"
                     aria-selected="true"
+                    onclick="scrollToElement(event, 'manual')"
+                    style="color: #757575; margin-left: 10px"
+                    >คู่มือการใช้งานแอปพลิเคชัน</a
+                  >
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a
+                    class="nav-link"
+                    id="rule-tab-header"
+                    data-bs-toggle="pill"
+                    data-bs-target="#rule"
+                    type="button"
+                    role="tab"
+                    aria-controls="rule"
+                    aria-selected="false"
+                    onclick="scrollToElement(event, 'rule')"
+                    style="color: #757575; margin-left: 10px"
+                    >ข้อกำหนดและเงื่อนไข</a
+                  >
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a
+                    class="nav-link"
+                    id="private-tab-header"
+                    data-bs-toggle="pill"
+                    data-bs-target="#private"
+                    type="button"
+                    role="tab"
+                    aria-controls="private"
+                    aria-selected="false"
+                    onclick="scrollToElement(event, 'private')"
+                    style="color: #757575; margin-left: 10px"
+                    >นโยบายความเป็นส่วนตัว</a
+                  >
+                </li>
+              </div>
+            </div>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link" href="manual1.html">เอกสารและข้อตกลง</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ติดต่อเรา</a>
+            </li>
+          </ul>
+          <!-- right login-->
+          <form class="d-flex" role="search">
+            <button class="btn1 btn-success" href="#" target="_blank">
+              เข้าสู่ระบบ
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <img src="picture/Rectangle 2.svg" class="img-fluid" alt="..." id="" />
+
+    <!-- Side Nav Menu -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-xxl-2 col-lg-3 d-none d-lg-block">
+          <div class="sticky-top fixed-top" style="top: 56px">
+            <nav class="flex-column align-items-stretch">
+              <div class="align-items-start">
+                <div
+                  class="nav flex-column flex-sm-row mb-sm-3 mb-lg-0 nav-pills justify-content-center align-items-stretch"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                  style="
+                    border-radius: 10px;
+                    background: rgba(168, 202, 48, 0.3);
+                  "
+                >
+                  <button
+                    class="btn btn-nav active flex-grow-1"
+                    id="manual-tab-header"
+                    data-bs-toggle="pill"
+                    data-bs-target="#manual"
+                    type="button"
+                    role="tab"
+                    aria-controls="manual"
+                    aria-selected="true"
+                    onclick="scrollToElement(event, 'manual')"
                   >
                     คู่มือการใช้งานแอปพลิเคชัน
                   </button>
                   <button
-                    class="nav-link flex-grow-1"
+                    class="btn btn-nav flex-grow-1"
                     id="rule-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#rule"
@@ -64,11 +169,12 @@
                     role="tab"
                     aria-controls="rule"
                     aria-selected="false"
+                    onclick="scrollToElement(event, 'rule')"
                   >
                     ข้อกำหนดและเงื่อนไข
                   </button>
                   <button
-                    class="nav-link flex-grow-1"
+                    class="btn btn-nav flex-grow-1"
                     id="private-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#private"
@@ -76,83 +182,326 @@
                     role="tab"
                     aria-controls="private"
                     aria-selected="false"
+                    onclick="scrollToElement(event, 'private')"
                   >
                     นโยบายความเป็นส่วนตัว
                   </button>
                 </div>
               </div>
-              <ul
-                class="nav nav-pills flex-column col-xxl-12 col-lg-12 d-none d-lg-flex"
+
+              <!-- Second Side Nav Menu -->
+              <div
+                class="tab-content flex"
+                id="v-pills-tabMenu"
+                style="
+                  border-radius: 10px;
+                  background: rgba(168, 202, 48, 0.3);
+                  margin-top: 20px;
+                "
               >
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-bs-toggle="collapse"
-                    href="#collapse-item-1"
-                    >คู่มือการใช้งานแอปพลิเคชัน</a
-                  >
-                  <div class="collapse" id="collapse-item-1">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link ms-3 my-1"
-                          data-bs-toggle="collapse"
-                          href="#collapse-item-1-1"
-                          >Item 1-1</a
-                        >
-                        <div class="collapse" id="collapse-item-1-1">
-                          <ul class="nav flex-column">
-                            <li class="nav-item">
-                              <a class="nav-link ms-3 my-1" href="#item-1-1-1"
-                                >Item 1-1-1</a
-                              >
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link ms-3 my-1" href="#item-1-1-2"
-                                >Item 1-1-2</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link ms-3 my-1" href="#item-1-2"
-                          >Item 1-2</a
-                        >
-                      </li>
-                    </ul>
+                <div
+                  class="tab-pane fade flex"
+                  id="rule1"
+                  role="tabpanel"
+                  aria-labelledby="rule1-tab"
+                  tabindex="0"
+                >
+                  <div data-bs-target="#navbar-example3" tabindex="0">
+                    <div class="scrollable-sidebar flex">
+                      <ul
+                        class="nav nav-item-side flex-column col-xxl-12 col-lg-12 d-none d-lg-flex"
+                      >
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link flex-grow-1"
+                            href="#item-1-1"
+                            onclick="scrollToElement(event, 'item-1-1')"
+                            style="color: #757575"
+                            >ข้อ 1 คำนิยาม</a
+                          >
+                        </li>
+
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link flex-grow-1"
+                            href="#item-1-2"
+                            onclick="scrollToElement(event, 'item-1-2')"
+                            style="color: #757575"
+                            >ข้อ 2 การอนุญาตให้ใช้งานแอปพลิเคชัน</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-3"
+                            onclick="scrollToElement(event, 'item-1-3')"
+                            style="color: #757575"
+                            >ข้อ 3 ข้อห้ามการใช้งานแอปพลิเคชัน</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-4"
+                            onclick="scrollToElement(event, 'item-1-4')"
+                            style="color: #757575"
+                            >ข้อ 4 บัญชีผู้ใช้</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-5"
+                            onclick="scrollToElement(event, 'item-1-5')"
+                            style="color: #757575"
+                            >ข้อ 5 การเก็บและใช้ข้อมูลส่วนบุคคลของผู้ใช้งาน</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-6"
+                            onclick="scrollToElement(event, 'item-1-6')"
+                            style="color: #757575"
+                            >ข้อ 6 คำรับรองและหน้าที่ของผู้ใช้งาน</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-7"
+                            onclick="scrollToElement(event, 'item-1-7')"
+                            style="color: #757575"
+                            >ข้อ 7 เนื้อหาของผู้ใช้งาน</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-8"
+                            onclick="scrollToElement(event, 'item-1-8')"
+                            style="color: #757575"
+                            >ข้อ 8
+                            การปฏิบัติผิดข้อกำหนดของผู้ใช้งานในกรณีดังต่อไปนี้</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-9"
+                            onclick="scrollToElement(event, 'item-1-9')"
+                            style="color: #757575"
+                            >ข้อ 9 ความพร้อมใช้งานของแอปพลิเคชัน</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-10"
+                            onclick="scrollToElement(event, 'item-1-10')"
+                            style="color: #757575"
+                            >ข้อ 10 การยกเว้นความรับผิด</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-11"
+                            onclick="scrollToElement(event, 'item-1-11')"
+                            style="color: #757575"
+                            >ข้อ 11 ทรัพย์สินทางปัญญา</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-12"
+                            onclick="scrollToElement(event, 'item-1-12')"
+                            style="color: #757575"
+                            >ข้อ 12 การเก็บรักษาความลับ</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-13"
+                            onclick="scrollToElement(event, 'item-1-13')"
+                            style="color: #757575"
+                            >ข้อ 13 การแก้ไขเปลี่ยนแปลง</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item--1-14"
+                            onclick="scrollToElement(event, 'item--1-14')"
+                            style="color: #757575"
+                            >ข้อ 14 ความสัมพันธ์ของคู่สัญญา</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-15"
+                            onclick="scrollToElement(event, 'item-1-15')"
+                            style="color: #757575"
+                            >ข้อ 15 การโอนสิทธิ</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-16"
+                            onclick="scrollToElement(event, 'item-1-16')"
+                            style="color: #757575"
+                            >ข้อ 16 การสละสิทธิ์</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-17"
+                            onclick="scrollToElement(event, 'item-1-17')"
+                            style="color: #757575"
+                            >ข้อ 17 การรายงานปัญหาและพฤติกรรม</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-18"
+                            onclick="scrollToElement(event, 'item-1-18')"
+                            style="color: #757575"
+                            >ข้อ 18 การช่วยเหลือ</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-19"
+                            onclick="scrollToElement(event, 'item-1-19')"
+                            style="color: #757575"
+                            >ข้อ 19 การบอกกล่าว</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-20"
+                            onclick="scrollToElement(event, 'item-1-20')"
+                            style="color: #757575"
+                            >ข้อ 20 กฎหมายที่ใช้บังคับ</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-1-21"
+                            onclick="scrollToElement(event, 'item-1-21')"
+                            style="color: #757575"
+                            >ข้อ 21 การระงับข้อพิพาท</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#item-2">ข้อกำหนดและเงื่อนไข</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-bs-toggle="collapse"
-                    href="#collapse-item-3"
-                    >นโยบายความเป็นส่วนตัว</a
-                  >
-                  <div class="collapse" id="collapse-item-3">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a class="nav-link ms-3 my-1" href="#item-3-1"
-                          >Item 3-1</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link ms-3 my-1" href="#item-3-2"
-                          >Item 3-2</a
-                        >
-                      </li>
-                    </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="private1"
+                  role="tabpanel"
+                  aria-labelledby="private1-tab"
+                  tabindex="0"
+                >
+                  <div data-bs-target="#navbar-example3" tabindex="0">
+                    <div class="scrollable-sidebar">
+                      <ul
+                        class="nav nav-item-side flex-column col-xxl-12 col-lg-12 d-none d-lg-flex"
+                      >
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-1"
+                            onclick="scrollToElement(event, 'item-2-1')"
+                            style="color: #757575"
+                            >1. วัตถุประสงค์ของนโยบายความเป็นส่วนตัว</a
+                          >
+                        </li>
+
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-2"
+                            onclick="scrollToElement(event, 'item-2-2')"
+                            style="color: #757575"
+                            >2. ความปลอดภัยของข้อมูล</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-3"
+                            onclick="scrollToElement(event, 'item-2-3')"
+                            style="color: #757575"
+                            >3. ข้อจำกัดการใช้นโยบายความเป็นส่วนตัว</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-4"
+                            onclick="scrollToElement(event, 'item-2-4')"
+                            style="color: #757575"
+                            >4.
+                            การปฏิบัติตามกฎหมายและการให้ความร่วมมือกับหน่วยงานกำกับดูแล</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-5"
+                            onclick="scrollToElement(event, 'item-2-5')"
+                            style="color: #757575"
+                            >5. การเปลี่ยนแปลงนโยบายความเป็นส่วนตัว</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-6"
+                            onclick="scrollToElement(event, 'item-2-6')"
+                            style="color: #757575"
+                            >6. การเข้าถึงและอัปเดตข้อมูลส่วนบุคคล</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-7"
+                            onclick="scrollToElement(event, 'item-2-7')"
+                            style="color: #757575"
+                            >7. ข้อมูลที่รวบรวมและเหตุผลที่รวบรวม</a
+                          >
+                        </li>
+                        <li class="nav-item-side">
+                          <a
+                            class="nav-link"
+                            href="#item-2-8"
+                            onclick="scrollToElement(event, 'item-2-8')"
+                            style="color: #757575"
+                            >8. ข้อมูลที่ท่านให้บริษัท</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </nav>
           </div>
         </div>
 
+        <!-- Main Content -->
         <div class="col-xxl-10 col-lg-9 col-sm-12">
           <div class="tab-content" id="v-pills-tabContent">
             <div
@@ -162,13 +511,7 @@
               aria-labelledby="manual-tab"
               tabindex="0"
             >
-              <div
-                data-bs-spy="scroll"
-                data-bs-target="#navbar-example3"
-                data-bs-smooth-scroll="true"
-                class="scrollspy-example-2"
-                tabindex="0"
-              >
+              <div data-bs-target="#navbar-example3" tabindex="0">
                 <div id="item-1">
                   <h4>
                     คู่มือการใช้งานแอปพลิเคชันบนมือถือสำหรับผู้ใช้งานที่เป็นเกษตรกรและผู้ใช้งานทั่วไป
@@ -205,13 +548,7 @@
               aria-labelledby="rule-tab"
               tabindex="0"
             >
-              <div
-                data-bs-spy="scroll"
-                data-bs-target="#navbar-example3"
-                data-bs-smooth-scroll="true"
-                class="scrollspy-example-2"
-                tabindex="0"
-              >
+              <div data-bs-target="#navbar-example3" tabindex="0">
                 <div id="item-1">
                   <h4>
                     ข้อกำหนดและเงื่อนไขการใช้งานแอปพลิเคชันข้อกำหนดและเงื่อนไขการใช้งานแอปพลิเคชัน
@@ -233,7 +570,7 @@
                 </p>
                 <div id="item-1-1">
                   <h5>ข้อ 1 คำนิยาม</h5>
-                  <p>
+                  <p style="color: #757575">
                     ภายในข้อกำหนดนี้ <br />
                     (ก) "แอปพลิเคชัน" หมายความว่าแอปพลิเคชันชื่อว่า มะลิซ้อน
                     TGIA x Farmfeed ซึ่งดำเนินการและให้บริการในลักษณะดังต่อไปนี้
@@ -259,7 +596,7 @@
                 </div>
                 <div id="item-1-2">
                   <h5>ข้อ 2 การอนุญาตให้ใช้งานแอปพลิเคชัน</h5>
-                  <p>
+                  <p style="color: #757575">
                     โดยที่เจ้าของแอปพลิเคชันได้เปิดให้ใช้งานซึ่งแอปพลิเคชัน
                     ตามข้อกำหนดฉบับนี้ และผู้ใช้งานมีความประสงค์จะใช้งาน
                     แอปพลิเคชันดังกล่าว โดยในการใช้งานแอปพลิเคชัน
@@ -272,7 +609,7 @@
                 </div>
                 <div id="item-1-3">
                   <h5>ข้อ 3 ข้อห้ามการใช้งานแอปพลิเคชัน</h5>
-                  <p>
+                  <p style="color: #757575">
                     ไม่ว่าในกรณีใด ๆ ในการใช้งานแอปพลิเคชันของ
                     ผู้ใช้งานผู้ใช้งานตกลงจะไม่ใช้งานแอปพลิเคชัน ไม่ว่าโดยตรง
                     หรือโดยอ้อมไปในลักษณะใด ลักษณะหนึ่ง ดังต่อไปนี้ <br />
@@ -291,7 +628,7 @@
                 </div>
                 <div id="item-1-4">
                   <h5>ข้อ 4 บัญชีผู้ใช้</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในการใช้งานแอปพลิเคชันเจ้าของแอปพลิเคชันอาจจัดให้มีบัญชีผู้ใช้ของแต่ละผู้ใช้ตามที่ผู้ใช้งานร้องขอในแต่ละคราว
                     โดยที่เจ้าของแอปพลิเคชันมีสิทธิ์แต่เพียงผู้เดียวในการ
                     อนุมัติเปิดบัญชีผู้ใช้ กำหนดประเภทบัญชีผู้ใช้
@@ -308,7 +645,7 @@
                 </div>
                 <div id="item-1-5">
                   <h5>ข้อ 5 การเก็บและใช้ข้อมูลส่วนบุคคลของผู้ใช้งาน</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในการใช้งานแอปพลิเคชันผู้ใช้งานรับทราบและตกลงให้เจ้าของแอปพลิเคชันมีสิทธิ์จัดเก็บประมวลผลนำไปใช้ประโยชน์ซึ่งข้อมูลส่วนบุคคลของผู้ใช้งานที่ผู้ใช้งานให้ไว้แก่เจ้าของแอปพลิเคชันอันได้แก่ข้อมูลส่วนบุคคลดังต่อไปนี้
                     เลขบัญชี ธ.ก.ส. สำนักงาน ธ.ก.ส. สาขา ธ.ก.ส.
                     เลขที่เอกสารสิทธิ์ เลขทะเบียนเกษตรกร ชื่อ-นามสกุล
@@ -334,7 +671,7 @@
                 </div>
                 <div id="item-1-6">
                   <h5>ข้อ 6 คำรับรองและหน้าที่ของผู้ใช้งาน</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในการใช้งานแอปพลิเคชันของผู้ใช้งานผู้ใช้งานมีหน้าที่และให้คำรับรองต่อเจ้าของแอปพลิเคชันว่าจะใช้ความพยายามอย่างที่สุดเพื่อปฏิบัติตามหน้าที่ของผู้ใช้งานและตลอดจนเงื่อนไขของข้อกำหนดนี้ดังต่อไปนี้
                     <br /><br />
                     (ก) ผู้ใช้งานได้อ่านและเข้าใจข้อความ และเงื่อนไขต่าง ๆ
@@ -357,7 +694,7 @@
                 </div>
                 <div id="item-1-7">
                   <h5>ข้อ 7 เนื้อหาของผู้ใช้งาน</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในการใช้งานแอปพลิเคชันผู้ใช้งานอาจสามารถแสดงเนื้อหาของผู้ใช้งานภายในแอปพลิเคชันได้ไม่ว่ามีการจํากัดสิทธิการเข้าถึงเนื้อหาหรือไม่ก็ตามโดยผู้ใช้งานตกลงจะ
                     <br /><br />
                     (ก)
@@ -381,7 +718,7 @@
                   <h5>
                     ข้อ 8 การปฏิบัติผิดข้อกำหนดของผู้ใช้งานในกรณีดังต่อไปนี้
                   </h5>
-                  <p>
+                  <p style="color: #757575">
                     <br />(ก)
                     ผู้ใช้งานฝ่าฝืนข้อกำหนดฉบับนี้คำรับรองของผู้ใช้งานที่ให้ไว้ในข้อกำหนดฉบับนี้หรือแนวทางปฏิบัติใด
                     ๆ
@@ -409,7 +746,7 @@
                 </div>
                 <div id="item-1-9">
                   <h5>ข้อ 9 ความพร้อมใช้งานของแอปพลิเคชัน</h5>
-                  <p>
+                  <p style="color: #757575">
                     ผู้ใช้งานตกลงและทราบดีว่าเจ้าของแอปพลิเคชั้นอาจระงับการใช้งานแอปพลิเคชัน
                     ไม่ว่าทั้งหมดหรือแต่บางส่วนไม่ว่าเป็นการชั่วคราวหรือถาวร
                     โดยไม่มีหน้าที่ต้องชดเชยความเสียหายใด ๆ
@@ -427,7 +764,7 @@
                 </div>
                 <div id="item-1-10">
                   <h5>ข้อ 10 การยกเว้นความรับผิด</h5>
-                  <p>
+                  <p style="color: #757575">
                     ผู้ใช้งานตกลงและทราบดีว่า
                     ไม่มีส่วนหนึ่งส่วนใดในข้อกำหนดนี้หรือภายในแอปพลิเคชัน
                     ไม่ว่าโดยชัดแจ้งหรือโดยปริยายที่เจ้าของแอปพลิเคชัน <br />
@@ -451,7 +788,7 @@
                 </div>
                 <div id="item-1-11">
                   <h5>ข้อ 11 ทรัพย์สินทางปัญญา</h5>
-                  <p>
+                  <p style="color: #757575">
                     ผู้ใช้งานเข้าใจและรับทราบดีว่าสิทธิ์ในทรัพย์สินทางปัญญาทั้งปวงอันรวมถึงแต่ไม่จำกัดเพียงเนื้อหาของเจ้าของแอปพลิเคชันลิขสิทธิ์สิทธิบัตร
                     เครื่องหมายการค้า เครื่องหมายบริการ ชื่อทางการค้า
                     หรือการออกแบบระบบงานใดที่ปรากฏในแอปพลิเคชันและที่ใช้งานบนแอปพลิเคชัน
@@ -467,7 +804,7 @@
                 </div>
                 <div id="item-1-12">
                   <h5>ข้อ 12 การเก็บรักษาความลับ</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในการใช้งานแอปพลิเคชัน
                     ผู้ใช้งานอาจได้ล่วงรู้หรือได้รับข้อมูลจากเจ้าของแอปพลิเคชันหรือจากบุคคลอื่นใดเพื่อการใช้งานแอปพลิเคชันตามข้อกำหนดนี้
                     ซึ่งยังไม่ได้มีการเปิดเผยอย่างสาธารณะหรือไม่มีเจตนาให้ถูกเปิดเผยอย่างทั่วไป
@@ -483,19 +820,19 @@
                 </div>
                 <div id="item-1-13">
                   <h5>ข้อ 13 การแก้ไขเปลี่ยนแปลง</h5>
-                  <p>
+                  <p style="color: #757575">
                     เจ้าของแอปพลิเคชั้นอาจแก้ไขและเปลี่ยนแปลงข้อความในข้อกาหนดนี้ได้ไม่ว่าเวลาใดก็ตามและไม่ว่าทั้งหมดหรือบางส่วนโดยเจ้าของแอปพลิเคชันจะแจ้งให้ผู้ใช้งานทราบเมื่อมีการเปลี่ยนแปลงในแต่ละคราวและให้ถือว่าข้อตกลงที่แก้ไขเพิ่มเต็มดังกล่าวเป็นส่วนหนึ่งของข้อกำหนดนี้ด้วย
                   </p>
                 </div>
                 <div id="item-1-14">
                   <h5>ข้อ 14 ความสัมพันธ์ของคู่สัญญา</h5>
-                  <p>
+                  <p style="color: #757575">
                     โดยที่คู่สัญญาทั้งสองฝ่ายเข้าใจและทราบดีว่าการเข้าทำข้อกำหนดฉบับนี้ไม่ทำให้คู่สัญญาและพนักงานของคู่สัญญาแต่ละฝ่ายมีความสัมพันธ์ในฐานะเป็นลูกจ้างตามกฎหมายแรงงานหรือเป็นหุ้นส่วนกันตามกฎหมายหุ้นส่วนและบริษัทแต่อย่างใด
                   </p>
                 </div>
                 <div id="item-1-15">
                   <h5>ข้อ 15 การโอนสิทธิ</h5>
-                  <p>
+                  <p style="color: #757575">
                     เว้นแต่จะได้กำหนดไว้เป็นอย่างอื่นในข้อกำหนดนี้ผู้ใช้งานตกลงจะไม่โอนสิทธิ์หน้าที่และ
                     /
                     หรือความรับผิดตามข้อกำหนดนี้ให้แก่บุคคลใดโดยมิได้รับความยินยอมเป็นลายลักษณ์อักษรจากเจ้าของแอปพลิเคชันเป็นการล่วงหน้า
@@ -503,7 +840,7 @@
                 </div>
                 <div id="item-1-16">
                   <h5>ข้อ 16 การสละสิทธิ์</h5>
-                  <p>
+                  <p style="color: #757575">
                     การที่เจ้าของแอปพลิเคชันไม่ใช้สิทธิ หรือใช้สิทธิ์ล่าช้า
                     ในเรื่องหนึ่งเรื่องใดหรือคราวหนึ่งคราวใดก็ดีมีให้ถือว่าเจ้าของ
                     แอปพลิเคชันสละสิทธิ์ในเรื่องดังกล่าว
@@ -513,7 +850,7 @@
                 </div>
                 <div id="item-1-17">
                   <h5>ข้อ 17 การรายงานปัญหาและพฤติกรรม</h5>
-                  <p>
+                  <p style="color: #757575">
                     ผู้ใช้งานอาจรายงานปัญญาใด ๆ
                     จากการใช้งานแอปพลิเคชันอันรวมถึงแต่ไม่จำกัดเพียงข้อผิดพลาดของแอปพลิเคชัน
                     หรือของชุดคำสั่งพฤติกรรมการใช้งานของผู้ใช้งานรายอื่น
@@ -524,7 +861,7 @@
                 </div>
                 <div id="item-1-18">
                   <h5>ข้อ 18 การช่วยเหลือ</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในกรณีที่ผู้ใช้งานมีข้อสงสัยข้อสอบถาม
                     เกี่ยวการใช้งานแอปพลิเคชัน ผู้ใช้งานสามารถ
                     ศึกษาข้อมูลเพิ่มเติมด้วยตัวผู้ใช้งานเองได้ที่
@@ -533,21 +870,21 @@
                 </div>
                 <div id="item-1-19">
                   <h5>ข้อ 19 การบอกกล่าว</h5>
-                  <p>
+                  <p style="color: #757575">
                     ผู้ใช้งานตกลงให้คำบอกกล่าวหรือหนังสือซึ่งเจ้าของแอปพลิเคชันต้องแจ้งให้แก่ตน
                     ภายใต้ข้อกำหนดนี้จะถือว่าได้มีการแจ้งแก่กันแล้ว
                   </p>
                 </div>
                 <div id="item-1-20">
                   <h5>ข้อ 20 กฎหมายที่ใช้บังคับ</h5>
-                  <p>
+                  <p style="color: #757575">
                     ผู้ใช้งานตกลงให้คำบอกกล่าวหรือหนังสือซึ่งเจ้าของแอปพลิเคชันต้องแจ้งให้แก่ตน
                     ภายใต้ข้อกำหนดนี้จะถือว่าได้มีการแจ้งแก่กันแล้ว
                   </p>
                 </div>
-                <div id="item-1-20">
+                <div id="item-1-21">
                   <h5>ข้อ 21 การระงับข้อพิพาท</h5>
-                  <p>
+                  <p style="color: #757575">
                     หากมีข้อโต้เถียงข้อขัดแย้งใด ๆ
                     เกิดขึ้นอันเนื่องมาจากข้อกำหนดฉบับนี้
                     หากคู่สัญญาไม่สามารถตกลงกันได้คู่สัญญาตกลงจะนำข้อพิพาทดังกล่าวขึ้นฟ้องต่อศาลในประเทศไทย
@@ -569,7 +906,7 @@
                 class="scrollspy-example-2"
                 tabindex="0"
               >
-                <div id="item-1">
+                <div id="item-2">
                   <h4>นโยบายความเป็นส่วนตัว</h4>
                   <p>
                     <br />
@@ -583,9 +920,9 @@
                     ขอให้ท่านปฏิเสธการใช้งานแอปพลิเคชั่นโดยถอนการติดตั้งแอปพลิเคชั่นจากเครื่องโทรศัพท์เคลื่อนที่/อุปกรณ์ดิจิตอลของท่านทันที
                   </p>
                 </div>
-                <div id="item-1-1">
+                <div id="item-2-1">
                   <h5>1. วัตถุประสงค์ของนโยบายความเป็นส่วนตัว</h5>
-                  <p>
+                  <p style="color: #757575">
                     ในการใช้งานแอปพลิเคชั่นนี้
                     บริษัทมีความประสงค์ที่จะแจ้งให้ท่านทราบอย่างชัดเจนว่าบริษัทรวบรวมข้อมูลอะไรของท่านบ้าง
                     มีวิธีการใช้และแบ่งปันข้อมูลของท่านอย่างไร
@@ -619,9 +956,9 @@
                     และคุณภาพโดยรวมของแอปพลิเคชั่น
                   </p>
                 </div>
-                <div id="item-1-1">
+                <div>
                   <b>ข้อมูลที่แบ่งปัน</b>
-                  <p>
+                  <p style="color: #757575">
                     บริษัทจะไม่นำข้อมูลของท่านไปแบ่งปันหรือเปิดเผยให้กับบริษัท
                     และ/หรือองค์กรอื่น และ/หรือบุคคลภายนอก ยกเว้นกรณี
                     ดังต่อไปนี้<br />
@@ -684,9 +1021,9 @@
                     หรือให้ข้อมูลส่วนบุคคลนั้นอยู่ภายใต้นโยบายความเป็นส่วนตัวอื่นๆ
                   </p>
                 </div>
-                <div id="item-1-2">
+                <div id="item-2-2">
                   <h5>2. ความปลอดภัยของข้อมูล</h5>
-                  <p>
+                  <p style="color: #757575">
                     บริษัทพยายามอย่างยิ่งที่จะปกป้องข้อมูลของท่านจากการเข้าถึง
                     การแก้ไขเปลี่ยนแปลง การเปิดเผย
                     หรือการทำลายโดยไม่ได้รับอนุญาต อย่างน้อยดังนี้
@@ -711,9 +1048,9 @@
                     <br />
                   </p>
                 </div>
-                <div id="item-1-3">
+                <div id="item-2-3">
                   <h5>3. ข้อจำกัดการใช้นโยบายความเป็นส่วนตัว</h5>
-                  <p>
+                  <p style="color: #757575">
                     นโยบายความเป็นส่วนตัวฉบับนี้
                     มีผลใช้บังคับกับแอปพลิเคชั่นนี้เท่านั้น
                     ไม่รวมถึงแอปพลิเคชั่นและ/หรือบริการที่มีนโยบายความเป็นส่วนตัว
@@ -727,12 +1064,12 @@
                     ในการนำเสนอและแสดงโฆษณาที่เกี่ยวข้อง <br />
                   </p>
                 </div>
-                <div id="item-1-4">
+                <div id="item-2-4">
                   <h5>
                     4.
                     การปฏิบัติตามกฎหมายและการให้ความร่วมมือกับหน่วยงานกำกับดูแล
                   </h5>
-                  <p>
+                  <p style="color: #757575">
                     บริษัทดำเนินการตรวจสอบและทบทวนการปฏิบัติตามนโยบายความเป็นส่วนตัว
                     และการปฏิบัติตามกฎหมายที่เกี่ยวข้อง ภายในองค์กรอย่างสม่ำเสมอ
                     (Self-Regulator)
@@ -742,18 +1079,18 @@
                     และหน่วยงานคุ้มครองผู้บริโภคต่างๆ <br />
                   </p>
                 </div>
-                <div id="item-1-5">
+                <div id="item-2-5">
                   <h5>5. การเปลี่ยนแปลงนโยบายความเป็นส่วนตัว</h5>
-                  <p>
+                  <p style="color: #757575">
                     บริษัทขอสงวนสิทธิ์ในการแก้ไขเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้ได้ตลอดเวลา
                     โดยไม่ต้องได้รับความยินยอมจากท่านล่วงหน้า
                     เว้นแต่เป็นการแก้ไขเปลี่ยนแปลงที่เป็นการริดรอนสิทธิของท่านตามนโยบายความเป็นส่วนตัวนี้
                     บริษัทจะกระทำมิได้หากไม่ได้รับความยินยอมจากท่านก่อน <br />
                   </p>
                 </div>
-                <div id="item-1-6">
+                <div id="item-2-6">
                   <h5>6. การเข้าถึงและอัปเดตข้อมูลส่วนบุคคล</h5>
-                  <p>
+                  <p style="color: #757575">
                     บริษัทมุ่งหวังเป็นอย่างยิ่งว่า ในการใช้แอปพลิเคชั่น
                     ท่านสามารถเข้าถึงข้อมูลส่วนบุคคลของท่านได้
                     หากข้อมูลดังกล่าวมีความบกพร่องหรือไม่ถูกต้อง
@@ -790,9 +1127,9 @@
                     หรือนำข้อมูลออกจากระบบสำรองของบริษัทในทันที
                   </p>
                 </div>
-                <div id="item-1-7">
+                <div id="item-2-7">
                   <h5>7. ข้อมูลที่รวบรวมและเหตุผลที่รวบรวม</h5>
-                  <p>
+                  <p style="color: #757575">
                     <b>
                       “AIS Pocket WIFI แอปพลิเคชั่น
                       สำหรับใช้ในการเชื่อมต่อกับอุปกรณ์ Pocket WIFI
@@ -807,9 +1144,9 @@
                     หรือเพลงใดที่ท่านอาจจะชื่นชอบ เป็นต้น ด้วยวิธีดังต่อไปนี้
                   </p>
                 </div>
-                <div id="item-1-8">
+                <div id="item-2-8">
                   <h5>8. ข้อมูลที่ท่านให้บริษัท</h5>
-                  <p>
+                  <p style="color: #757575">
                     ให้ท่านแจ้งหรือกรอกข้อมูลส่วนบุคคลของท่าน เช่น ชื่อ-นามสกุล
                     ที่อยู่ หมายเลขโทรศัพท์ หมายเลขบัตรเครดิต เป็นต้น
                     สำหรับแอปพลิเคชั่นที่ต้องให้มีการลงทะเบียนก่อนการใช้งาน
@@ -942,5 +1279,100 @@
         </div>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("rule-tab")
+        .addEventListener("click", function () {
+          document.getElementById("rule").classList.add("show");
+          document.getElementById("rule1").classList.add("show");
+          document.getElementById("rule1").classList.add("active");
+          document.getElementById("private").classList.remove("show");
+          document.getElementById("manual").classList.remove("show");
+          document.getElementById("manual").classList.remove("active");
+          document.getElementById("private1").classList.remove("show");
+          document.getElementById("private1").classList.remove("active");
+        });
+
+      document
+        .getElementById("rule-tab-header")
+        .addEventListener("click", function () {
+          document.getElementById("rule").classList.add("show");
+          document.getElementById("rule1").classList.add("show");
+          document.getElementById("rule1").classList.add("active");
+          document.getElementById("private").classList.remove("show");
+          document.getElementById("manual").classList.remove("show");
+          document.getElementById("manual").classList.remove("active");
+          document.getElementById("private1").classList.remove("show");
+          document.getElementById("private1").classList.remove("active");
+        });
+
+      document
+        .getElementById("private-tab")
+        .addEventListener("click", function () {
+          document.getElementById("private").classList.add("show");
+          document.getElementById("private1").classList.add("show");
+          document.getElementById("private1").classList.add("active");
+          document.getElementById("manual").classList.remove("show");
+          document.getElementById("manual").classList.remove("active");
+          document.getElementById("rule").classList.remove("show");
+          document.getElementById("rule1").classList.remove("show");
+          document.getElementById("rule1").classList.remove("active");
+        });
+
+      document
+        .getElementById("private-tab-header")
+        .addEventListener("click", function () {
+          document.getElementById("private").classList.add("show");
+          document.getElementById("private1").classList.add("show");
+          document.getElementById("private1").classList.add("active");
+          document.getElementById("manual").classList.remove("show");
+          document.getElementById("manual").classList.remove("active");
+          document.getElementById("rule").classList.remove("show");
+          document.getElementById("rule1").classList.remove("show");
+          document.getElementById("rule1").classList.remove("active");
+        });
+
+      document
+        .getElementById("manual-tab")
+        .addEventListener("click", function () {
+          document.getElementById("private").classList.remove("show");
+          document.getElementById("private1").classList.remove("show");
+          document.getElementById("private1").classList.remove("active");
+          document.getElementById("manual").classList.add("show");
+          document.getElementById("rule").classList.remove("show");
+          document.getElementById("rule1").classList.remove("show");
+          document.getElementById("rule1").classList.remove("active");
+        });
+
+      document
+        .getElementById("manual-tab-header")
+        .addEventListener("click", function () {
+          document.getElementById("private").classList.remove("show");
+          document.getElementById("private1").classList.remove("show");
+          document.getElementById("private1").classList.remove("active");
+          document.getElementById("manual").classList.add("show");
+          document.getElementById("rule").classList.remove("show");
+          document.getElementById("rule1").classList.remove("show");
+          document.getElementById("rule1").classList.remove("active");
+        });
+
+      function scrollToElement(event, targetId) {
+        event.preventDefault();
+
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const offset = 100; // Adjust the offset value as per your needs
+
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const targetRect = targetElement.getBoundingClientRect().top;
+          const scrollToPos = targetRect - bodyRect - offset;
+
+          window.scrollTo({
+            top: scrollToPos,
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
   </body>
 </html>
