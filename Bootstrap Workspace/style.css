@@ -5,8 +5,67 @@
 }
 
 #map {
-  height: 400px;
-  width: 100%;
+    height: 400px;
+    width: 100%;
+  }
+.navbar-brand{
+    font-size: 2rem;
+    color: black;
+    /* font-family: 'Anuphan', sans-serif; */
+    /* font-family: 'IBM Plex Sans Thai', sans-serif; */
+}
+.nav-item{
+    font-weight: 500;
+    padding-left: 35px;
+}
+#welcome{
+    font-weight: bolder;
+    font-size: 4vw;
+    /* background-image: url(picture/Hero_BG.svg) */
+    /* width: 100vw; */
+    /* height: 50vw; */
+    /* 1440 x 720 is default so height follow the width of device*/
+}
+.intro_card{
+    width: 220px;
+    height: 220px;
+    font-size: medium;
+    margin:auto;
+    text-align: center;
+    border-radius: 25px;
+    border-width: thin;
+    border: solid rgb(83, 248, 83);
+    box-shadow: 5% 5% 10% rgb(11, 200, 11);
+    /* background-color: aqua; */
+    /* border not work */
+}
+#first_box{
+    padding: 10px 10px;
+    margin-bottom: 5%;
+}
+#mid_box{
+    padding: 10px 0px;
+    margin-bottom: 5%;
+}
+#last_box{
+    padding: 10px 0px;
+    margin-bottom: 5%;
+}
+#hero{
+    background-color: rgba(240, 240, 240, 0.973);
+}
+#desc{
+    font-size: 100%;
+}
+#Step_Landingpage{
+    font-size: 70px;
+}
+#video_promoting{
+    /* background-color: blue; */
+    justify-content: center;
+    display: flex;
+    position: relative;
+    aspect-ratio: 16/9 ;
 }
 
 .btn1 {
