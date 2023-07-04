@@ -30,14 +30,11 @@
     width: 220px;
     height: 220px;
     font-size: medium;
-    margin:auto;
     text-align: center;
     border-radius: 25px;
-    border-width: thin;
-    border: solid rgb(83, 248, 83);
-    box-shadow: 5% 5% 10% rgb(11, 200, 11);
-    /* background-color: aqua; */
-    /* border not work */
+    /* border-width: thick; */
+    /* border: solid rgb(40, 167, 69);
+    box-shadow: 5% 5% 10% rgb(40, 167, 69); */
 }
 #first_box{
     padding: 10px 10px;
