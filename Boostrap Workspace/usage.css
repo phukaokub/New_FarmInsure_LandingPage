@@ -21,21 +21,11 @@ html{
     border: 2px solid white;
 }
 /* <!-- =============================SECTION ขั้นตอนในการแจ้งรายงานความเสียหายง่ายๆ================================ --> */
-.con2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .Report1{
     width: 400px;
-    border: 3px solid rgb(46, 204, 113);    
-    margin: 10px;
+    border: 3px solid rgb(46, 204, 113);  
 }
-
 /* <!-- =============================SECTION ข้อมูลเพิ่มเติม================================ --> */
-.info{
-    min-width: 400px;
-}
 .con4{
     margin: auto;
     padding: 0px 100px;
@@ -58,26 +48,6 @@ html{
     transition: all;
     border: 2px solid white;
 }
-.pic1{
-    aspect-ratio:  561 / 707;
-    width: 230px;
-    height: 350px;
-    border: none;
-}
-.pic2{
-    aspect-ratio:  588 / 341;
-    width: 500px;
-    height: 350px;
-    border: none;
-}
-/* .infopic2{
-    width: 500px;
-    height: 330px;
-    border: 1px solid rgb(21, 27, 143);
-    justify-content: left;
-    display: flex;
-    align-items: center;
-} */
 .box1{
     border: none;
     width: 300;
@@ -91,14 +61,14 @@ html{
 .sample1{
     border: 2px solid rgb(33, 149, 76);
     background-color:rgba(168, 202, 48, 0.3) ;
-    width: 300;
+    width: 290;
     height: 500;
     border-radius: 30px;
 }
 .sample2{
     border: 2px solid rgb(33, 149, 76);
     background-color:rgba(168, 202, 48, 0.3) ;
-    width: 300;
+    width: 290;
     height: 300;
     border-radius: 30px;
 }
@@ -208,7 +178,6 @@ html{
 }
 .text06{
     border: none;
-    height: 500px;
     width: 500px;
 }
 .context6{
@@ -216,7 +185,6 @@ html{
     display: flex;
     align-items: center;
     height: 500px;
-    width: 700px;
     border: none;
 }
 /* <!-- =============================SECTION การวาดแปลง================================ --> */
