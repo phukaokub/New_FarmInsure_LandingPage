@@ -1,12 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Anuphan&family=IBM+Plex+Sans+Thai&display=swap%27);
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
-
-
 html{
     scroll-behavior: smooth;
 }
@@ -15,13 +10,6 @@ html{
     background-color:rgba(168, 202, 48, 0.2) ;
 }
 /* <!-- =============================NAVBAR================================ --> */
-.nav-item{
-    font-weight:500 ;
-    padding-left: 35px;
-}
-.nav-link{
-    color:black;
-}
 .btn{
     background-color: transparent;
     color: black;
@@ -33,23 +21,10 @@ html{
     border: 2px solid white;
 }
 /* <!-- =============================SECTION ขั้นตอนในการแจ้งรายงานความเสียหายง่ายๆ================================ --> */
-.ceta{
-    min-width: 400px ;
-    border: none;
-}
 .con2{
-    margin: auto;
-    padding: 0px 100px;
-    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.con2 h2{
-    padding: 1rem;
-}
-.con2 p { 
-    padding: 0rem;
 }
 .Report1{
     width: 400px;
