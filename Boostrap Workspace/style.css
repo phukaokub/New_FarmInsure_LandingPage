@@ -70,6 +70,14 @@ html{
     height: 350px;
     border: none;
 }
+/* .infopic2{
+    width: 500px;
+    height: 330px;
+    border: 1px solid rgb(21, 27, 143);
+    justify-content: left;
+    display: flex;
+    align-items: center;
+} */
 .box1{
     border: none;
     width: 300;
