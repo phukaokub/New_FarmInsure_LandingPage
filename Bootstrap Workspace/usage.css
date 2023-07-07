@@ -9,21 +9,9 @@ html{
     border: none;
     background-color:rgba(168, 202, 48, 0.2) ;
 }
-/* <!-- =============================NAVBAR================================ --> */
-.btn{
-    background-color: transparent;
-    color: black;
-    border: 2px solid rgb(46, 204, 113);
-}
-.btn:hover{
-    background-color:rgb(46, 204, 113) ;
-    transition: all;
-    border: 2px solid white;
-}
 /* <!-- =============================SECTION ขั้นตอนในการแจ้งรายงานความเสียหายง่ายๆ================================ --> */
 .Report1{
     width: 400px;
-    border: 3px solid rgb(46, 204, 113);  
 }
 /* <!-- =============================SECTION ข้อมูลเพิ่มเติม================================ --> */
 .con4{
@@ -34,19 +22,9 @@ html{
     justify-content: center;
     align-items: center;
 }
-.btn1 {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    border: 2px solid rgb(34, 82, 54);
-}
 .textbtn{
     color: rgb(0, 0, 0);
     text-decoration: none;
-}
-.btn:hover{
-    background-color:rgb(46, 204, 113) ;
-    transition: all;
-    border: 2px solid white;
 }
 .box1{
     border: none;
@@ -59,14 +37,14 @@ html{
     height: 300;
 }
 .sample1{
-    border: 2px solid rgb(33, 149, 76);
+    /* border: 2px solid rgb(33, 149, 76); */
     background-color:rgba(168, 202, 48, 0.3) ;
     width: 290;
     height: 500;
     border-radius: 30px;
 }
 .sample2{
-    border: 2px solid rgb(33, 149, 76);
+    /* border: 2px solid rgb(33, 149, 76); */
     background-color:rgba(168, 202, 48, 0.3) ;
     width: 290;
     height: 300;
