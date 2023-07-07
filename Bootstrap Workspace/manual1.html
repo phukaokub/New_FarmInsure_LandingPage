@@ -14,6 +14,20 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="js/bootstrap.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"
+  ></script>
   </head>
   <body>
     <!-- Header -->
@@ -47,12 +61,12 @@
               <a class="nav-link" href="index.html">หน้าแรก</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">วิธีการใช้งาน</a>
+              <a class="nav-link" href="usage.html">วิธีการใช้งาน</a>
             </li>
             <li class="nav-item d-lg-none">
               <!-- Add the d-lg-none class to hide on lg screens -->
               <a
-                class="nav-link"
+                class="nav-link active"
                 data-bs-toggle="collapse"
                 href="#collapseMenu"
                 role="button"
@@ -74,7 +88,7 @@
                     aria-controls="manual"
                     aria-selected="true"
                     onclick="scrollToElement(event, 'manual')"
-                    style="color: #757575; margin-left: 10px"
+                    style="margin-left: 10px"
                     >คู่มือการใช้งานแอปพลิเคชัน</a
                   >
                 </li>
@@ -89,7 +103,7 @@
                     aria-controls="rule"
                     aria-selected="false"
                     onclick="scrollToElement(event, 'rule')"
-                    style="color: #757575; margin-left: 10px"
+                    style="margin-left: 10px;"
                     >ข้อกำหนดและเงื่อนไข</a
                   >
                 </li>
@@ -104,14 +118,14 @@
                     aria-controls="private"
                     aria-selected="false"
                     onclick="scrollToElement(event, 'private')"
-                    style="color: #757575; margin-left: 10px"
+                    style="margin-left: 10px"
                     >นโยบายความเป็นส่วนตัว</a
                   >
                 </li>
               </div>
             </div>
             <li class="nav-item d-none d-lg-block">
-              <a class="nav-link" href="manual1.html">เอกสารและข้อตกลง</a>
+              <a class="nav-link active" href="manual1.html">เอกสารและข้อตกลง</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">ติดต่อเรา</a>
@@ -139,7 +153,7 @@
     </nav>
 
     <!-- Hero -->
-    <img src="picture/Rectangle 2.svg" class="img-fluid" alt="..." id="" />
+    <img src="picture/Rectangle 2.svg" class="img-fluid" alt="..." id="" height="250px" />
 
     <!-- Side Nav Menu -->
     <div class="container-fluid mt-4">
@@ -155,12 +169,12 @@
                   aria-orientation="vertical"
                   style="
                     border-radius: 10px;
-                    background: rgba(25, 135, 84, 0.3);
+                    background: rgba(25, 135, 84, 0.22);
                   "
                 >
                   <button
-                    class="btn btn-nav active flex-grow-1"
-                    id="manual-tab-header"
+                    class="btn btn-nav active flex-grow-1 mb-2"
+                    id="manual-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#manual"
                     type="button"
@@ -169,10 +183,10 @@
                     aria-selected="true"
                     onclick="scrollToElement(event, 'manual')"
                   >
-                    คู่มือการใช้งานแอปพลิเคชัน
+                    <span class="btn-text"> คู่มือการใช้งานแอปพลิเคชัน </span>
                   </button>
                   <button
-                    class="btn btn-nav flex-grow-1"
+                    class="btn btn-nav flex-grow-1 mb-2"
                     id="rule-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#rule"
@@ -182,7 +196,7 @@
                     aria-selected="false"
                     onclick="scrollToElement(event, 'rule')"
                   >
-                    ข้อกำหนดและเงื่อนไข
+                    <span class="btn-text"> ข้อกำหนดและเงื่อนไข </span>
                   </button>
                   <button
                     class="btn btn-nav flex-grow-1"
@@ -195,7 +209,7 @@
                     aria-selected="false"
                     onclick="scrollToElement(event, 'private')"
                   >
-                    นโยบายความเป็นส่วนตัว
+                    <span class="btn-text"> นโยบายความเป็นส่วนตัว </span>
                   </button>
                 </div>
               </div>
@@ -206,7 +220,7 @@
                 id="v-pills-tabMenu"
                 style="
                   border-radius: 10px;
-                  background: rgba(25, 135, 84, 0.3);
+                  background: rgba(25, 135, 84, 0.22);
                   margin-top: 20px;
                 "
               >
@@ -220,14 +234,14 @@
                   <div data-bs-target="#navbar-example3" tabindex="0">
                     <div class="scrollable-sidebar flex">
                       <ul
-                        class="nav nav-item-side flex-column col-xxl-12 col-lg-12 d-none d-lg-flex"
+                        class="nav flex-column col-xxl-12 col-lg-12 d-none d-lg-flex"
                       >
                         <li class="nav-item-side">
                           <a
                             class="nav-link flex-grow-1"
                             href="#item-1-1"
                             onclick="scrollToElement(event, 'item-1-1')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 1 คำนิยาม</a
                           >
                         </li>
@@ -237,7 +251,7 @@
                             class="nav-link flex-grow-1"
                             href="#item-1-2"
                             onclick="scrollToElement(event, 'item-1-2')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 2 การอนุญาตให้ใช้งานแอปพลิเคชัน</a
                           >
                         </li>
@@ -246,7 +260,7 @@
                             class="nav-link"
                             href="#item-1-3"
                             onclick="scrollToElement(event, 'item-1-3')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 3 ข้อห้ามการใช้งานแอปพลิเคชัน</a
                           >
                         </li>
@@ -255,7 +269,7 @@
                             class="nav-link"
                             href="#item-1-4"
                             onclick="scrollToElement(event, 'item-1-4')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 4 บัญชีผู้ใช้</a
                           >
                         </li>
@@ -264,7 +278,7 @@
                             class="nav-link"
                             href="#item-1-5"
                             onclick="scrollToElement(event, 'item-1-5')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 5 การเก็บและใช้ข้อมูลส่วนบุคคลของผู้ใช้งาน</a
                           >
                         </li>
@@ -273,7 +287,7 @@
                             class="nav-link"
                             href="#item-1-6"
                             onclick="scrollToElement(event, 'item-1-6')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 6 คำรับรองและหน้าที่ของผู้ใช้งาน</a
                           >
                         </li>
@@ -282,7 +296,7 @@
                             class="nav-link"
                             href="#item-1-7"
                             onclick="scrollToElement(event, 'item-1-7')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 7 เนื้อหาของผู้ใช้งาน</a
                           >
                         </li>
@@ -291,7 +305,7 @@
                             class="nav-link"
                             href="#item-1-8"
                             onclick="scrollToElement(event, 'item-1-8')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 8
                             การปฏิบัติผิดข้อกำหนดของผู้ใช้งานในกรณีดังต่อไปนี้</a
                           >
@@ -301,7 +315,7 @@
                             class="nav-link"
                             href="#item-1-9"
                             onclick="scrollToElement(event, 'item-1-9')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 9 ความพร้อมใช้งานของแอปพลิเคชัน</a
                           >
                         </li>
@@ -310,7 +324,7 @@
                             class="nav-link"
                             href="#item-1-10"
                             onclick="scrollToElement(event, 'item-1-10')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 10 การยกเว้นความรับผิด</a
                           >
                         </li>
@@ -319,7 +333,7 @@
                             class="nav-link"
                             href="#item-1-11"
                             onclick="scrollToElement(event, 'item-1-11')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 11 ทรัพย์สินทางปัญญา</a
                           >
                         </li>
@@ -328,7 +342,7 @@
                             class="nav-link"
                             href="#item-1-12"
                             onclick="scrollToElement(event, 'item-1-12')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 12 การเก็บรักษาความลับ</a
                           >
                         </li>
@@ -337,7 +351,7 @@
                             class="nav-link"
                             href="#item-1-13"
                             onclick="scrollToElement(event, 'item-1-13')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 13 การแก้ไขเปลี่ยนแปลง</a
                           >
                         </li>
@@ -345,8 +359,8 @@
                           <a
                             class="nav-link"
                             href="#item--1-14"
-                            onclick="scrollToElement(event, 'item--1-14')"
-                            style="color: #757575"
+                            onclick="scrollToElement(event, 'item-1-14')"
+                            style="color: #4f5a56"
                             >ข้อ 14 ความสัมพันธ์ของคู่สัญญา</a
                           >
                         </li>
@@ -355,7 +369,7 @@
                             class="nav-link"
                             href="#item-1-15"
                             onclick="scrollToElement(event, 'item-1-15')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 15 การโอนสิทธิ</a
                           >
                         </li>
@@ -364,7 +378,7 @@
                             class="nav-link"
                             href="#item-1-16"
                             onclick="scrollToElement(event, 'item-1-16')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 16 การสละสิทธิ์</a
                           >
                         </li>
@@ -373,7 +387,7 @@
                             class="nav-link"
                             href="#item-1-17"
                             onclick="scrollToElement(event, 'item-1-17')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 17 การรายงานปัญหาและพฤติกรรม</a
                           >
                         </li>
@@ -382,7 +396,7 @@
                             class="nav-link"
                             href="#item-1-18"
                             onclick="scrollToElement(event, 'item-1-18')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 18 การช่วยเหลือ</a
                           >
                         </li>
@@ -391,7 +405,7 @@
                             class="nav-link"
                             href="#item-1-19"
                             onclick="scrollToElement(event, 'item-1-19')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 19 การบอกกล่าว</a
                           >
                         </li>
@@ -400,7 +414,7 @@
                             class="nav-link"
                             href="#item-1-20"
                             onclick="scrollToElement(event, 'item-1-20')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 20 กฎหมายที่ใช้บังคับ</a
                           >
                         </li>
@@ -409,7 +423,7 @@
                             class="nav-link"
                             href="#item-1-21"
                             onclick="scrollToElement(event, 'item-1-21')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >ข้อ 21 การระงับข้อพิพาท</a
                           >
                         </li>
@@ -418,14 +432,14 @@
                   </div>
                 </div>
                 <div
-                  class="tab-pane fade"
+                  class="tab-pane fade flex"
                   id="private1"
                   role="tabpanel"
                   aria-labelledby="private1-tab"
                   tabindex="0"
                 >
                   <div data-bs-target="#navbar-example3" tabindex="0">
-                    <div class="scrollable-sidebar">
+                    <div class="scrollable-sidebar flex">
                       <ul
                         class="nav nav-item-side flex-column col-xxl-12 col-lg-12 d-none d-lg-flex"
                       >
@@ -434,7 +448,7 @@
                             class="nav-link"
                             href="#item-2-1"
                             onclick="scrollToElement(event, 'item-2-1')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >1. วัตถุประสงค์ของนโยบายความเป็นส่วนตัว</a
                           >
                         </li>
@@ -444,7 +458,7 @@
                             class="nav-link"
                             href="#item-2-2"
                             onclick="scrollToElement(event, 'item-2-2')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >2. ความปลอดภัยของข้อมูล</a
                           >
                         </li>
@@ -453,7 +467,7 @@
                             class="nav-link"
                             href="#item-2-3"
                             onclick="scrollToElement(event, 'item-2-3')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >3. ข้อจำกัดการใช้นโยบายความเป็นส่วนตัว</a
                           >
                         </li>
@@ -462,7 +476,7 @@
                             class="nav-link"
                             href="#item-2-4"
                             onclick="scrollToElement(event, 'item-2-4')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >4.
                             การปฏิบัติตามกฎหมายและการให้ความร่วมมือกับหน่วยงานกำกับดูแล</a
                           >
@@ -472,7 +486,7 @@
                             class="nav-link"
                             href="#item-2-5"
                             onclick="scrollToElement(event, 'item-2-5')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >5. การเปลี่ยนแปลงนโยบายความเป็นส่วนตัว</a
                           >
                         </li>
@@ -481,7 +495,7 @@
                             class="nav-link"
                             href="#item-2-6"
                             onclick="scrollToElement(event, 'item-2-6')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >6. การเข้าถึงและอัปเดตข้อมูลส่วนบุคคล</a
                           >
                         </li>
@@ -490,7 +504,7 @@
                             class="nav-link"
                             href="#item-2-7"
                             onclick="scrollToElement(event, 'item-2-7')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >7. ข้อมูลที่รวบรวมและเหตุผลที่รวบรวม</a
                           >
                         </li>
@@ -499,7 +513,7 @@
                             class="nav-link"
                             href="#item-2-8"
                             onclick="scrollToElement(event, 'item-2-8')"
-                            style="color: #757575"
+                            style="color: #4f5a56"
                             >8. ข้อมูลที่ท่านให้บริษัท</a
                           >
                         </li>
@@ -507,6 +521,13 @@
                     </div>
                   </div>
                 </div>
+                <div
+                  class="tab-pane fade"
+                  id="manual1"
+                  role="tabpanel"
+                  aria-labelledby="manual1-tab"
+                  tabindex="0"
+                ></div>
               </div>
             </nav>
           </div>
@@ -910,13 +931,7 @@
               aria-labelledby="private-tab"
               tabindex="0"
             >
-              <div
-                data-bs-spy="scroll"
-                data-bs-target="#navbar-example3"
-                data-bs-smooth-scroll="true"
-                class="scrollspy-example-2"
-                tabindex="0"
-              >
+              <div data-bs-target="#navbar-example3" tabindex="0">
                 <div id="item-2">
                   <h4>นโยบายความเป็นส่วนตัว</h4>
                   <p>
@@ -1300,6 +1315,8 @@
           document.getElementById("private").classList.remove("show");
           document.getElementById("manual").classList.remove("show");
           document.getElementById("manual").classList.remove("active");
+          document.getElementById("manual1").classList.remove("show");
+          document.getElementById("manual1").classList.remove("active");
           document.getElementById("private1").classList.remove("show");
           document.getElementById("private1").classList.remove("active");
         });
@@ -1313,6 +1330,8 @@
           document.getElementById("private").classList.remove("show");
           document.getElementById("manual").classList.remove("show");
           document.getElementById("manual").classList.remove("active");
+          document.getElementById("manual1").classList.remove("show");
+          document.getElementById("manual1").classList.remove("active");
           document.getElementById("private1").classList.remove("show");
           document.getElementById("private1").classList.remove("active");
         });
@@ -1325,6 +1344,8 @@
           document.getElementById("private1").classList.add("active");
           document.getElementById("manual").classList.remove("show");
           document.getElementById("manual").classList.remove("active");
+          document.getElementById("manual1").classList.remove("show");
+          document.getElementById("manual1").classList.remove("active");
           document.getElementById("rule").classList.remove("show");
           document.getElementById("rule1").classList.remove("show");
           document.getElementById("rule1").classList.remove("active");
@@ -1338,6 +1359,8 @@
           document.getElementById("private1").classList.add("active");
           document.getElementById("manual").classList.remove("show");
           document.getElementById("manual").classList.remove("active");
+          document.getElementById("manual1").classList.remove("show");
+          document.getElementById("manual1").classList.remove("active");
           document.getElementById("rule").classList.remove("show");
           document.getElementById("rule1").classList.remove("show");
           document.getElementById("rule1").classList.remove("active");
@@ -1350,6 +1373,8 @@
           document.getElementById("private1").classList.remove("show");
           document.getElementById("private1").classList.remove("active");
           document.getElementById("manual").classList.add("show");
+          document.getElementById("v-pills-tabMenu").classList.remove("show");
+          document.getElementById("v-pills-tabMenu").classList.remove("active");
           document.getElementById("rule").classList.remove("show");
           document.getElementById("rule1").classList.remove("show");
           document.getElementById("rule1").classList.remove("active");
@@ -1362,6 +1387,8 @@
           document.getElementById("private1").classList.remove("show");
           document.getElementById("private1").classList.remove("active");
           document.getElementById("manual").classList.add("show");
+          document.getElementById("v-pills-tabMenu").classList.remove("show");
+          document.getElementById("v-pills-tabMenu").classList.remove("active");
           document.getElementById("rule").classList.remove("show");
           document.getElementById("rule1").classList.remove("show");
           document.getElementById("rule1").classList.remove("active");
@@ -1382,8 +1409,93 @@
             top: scrollToPos,
             behavior: "smooth",
           });
+
+          // Add "active" class to the clicked link
+          const links = document.querySelectorAll(".nav-link");
+          links.forEach((link) => {
+            link.classList.remove("active");
+          });
+          event.target.classList.add("active");
+
+          // Remove "active" class from links after a short delay
+          setTimeout(function () {
+            links.forEach((link) => {
+              link.classList.remove("active");
+            });
+          }, 800); // Adjust the delay time as per your needs
         }
       }
     </script>
+    <!-- =============================Footer================================ -->
+    <footer class="bg-light text-dark pt-5 pb-4" id="footer">
+      <div class="container text-md-left">
+        <div class="row text-md-left">
+          <!-- =============================SECTION เกี่ยวกับเรา================================ -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+            <h5 class="mb-4 font-weight-bold text-black">เกี่ยวกับเรา</h5>
+            <p>
+              บริษัท อินฟิวส์ จำกัด
+              เป็นบริษัทที่ก่อตั้งขึ้นโดยทําธุรกิจให้บริการจัดการข้อมูลสารสนเทศและพัฒนาระบบวิเคราะห์ข้อมูลเชิงพื้นที่ต่างๆ
+              โดยเน้นการวิจัย และการรับโจทย์ปัญหาเพื่อพัฒนาหาแนวทางแก้ไข
+            </p>
+          </div>
+          <!-- =============================SECTION ลิ้งก์ที่เกี่ยวข้อง================================ -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="mb-4 font-weight-bold text-black">
+              ลิ้งก์ที่เกี่ยวข้อง
+            </h5>
+            <p>
+              <a
+                href="https://www.infuse.co.th"
+                class="text-black text-decoration"
+                >infuse</a
+              >
+            </p>
+          </div>
+
+          <!-- =============================SECTION ดาวน์โหลด================================ -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="mb-4 font-weight-bold text-black">ดาวน์โหลด</h5>
+            <p>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.infuse.farminsure&hl=en-TH"
+                class="text-black"
+                target="_blank"
+                style="text-decoration: none"
+                ><img
+                  src="picture/android.png"
+                  class="mx-4"
+                  width="30px"
+                  height="30px"
+                />
+                Android : Play store</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://apps.apple.com/th/app/%E0%B8%A1%E0%B8%B0%E0%B8%A5-%E0%B8%8B-%E0%B8%AD%E0%B8%99/id1506247136"
+                class="text-black"
+                style="text-decoration: none"
+                ><img
+                  src="picture/app-store.png"
+                  class="mx-4"
+                  width="30px"
+                  height="30px"
+                />Ios : Appstore</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-item-center">
+          <div class="text-center">
+            <p>
+              ©2023
+              <strong>infuse</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

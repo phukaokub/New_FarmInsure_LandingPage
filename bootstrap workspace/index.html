@@ -1,285 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Malisorn</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="js/bootstrap.min.js"></script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-    <!-- ============  Sticky Top Nav Bar ============ -->
+  <body>
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container">
-            <a class="navbar-brand ms-1 my-lg-1" href="#">
-                <img src="picture/logo มะลิซ้อน/Artboard 4@4x.png" alt="Logo" width="30"
-                    class="d-inline-block align-text-top" />
-                มะลิซ้อน
-            </a>
-            <!-- button for phone only -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar1">
-                <!-- mid navbar -->
-                <ul class="navbar-nav mx-auto my-4 my-lg-0 mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">หน้าแรก</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">วิธีการใช้งาน</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="manual1.html">เอกสารและข้อตกลง</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">ติดต่อเรา</a>
-                    </li>
-                </ul>
-                <!-- right login-->
-                <form class="d-flex my-4  my-lg-0 ms-4 ms-lg-0" role="search">
-                    <a href="https://insureweb.infuse.co.th/login" target="_blank">
-                        <button type="button" class="btn btn-outline-success"
-                        style="border-radius: 10px; width: 125px; height: 40px; padding: 5px;">
-                        เข้าสู่ระบบ
-                        </button>
-                    </a>
-                </form>
+      <div class="container">
+        <a class="navbar-brand ms-1" href="#">
+          <img
+            src="picture/logo มะลิซ้อน/Artboard 4@4x.png"
+            alt="Logo"
+            width="30"
+            class="d-inline-block align-text-top"
+          />
+          มะลิซ้อน
+        </a>
+        <!-- button for phone only -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar1"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+          <!-- mid navbar -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">หน้าแรก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usage.html">วิธีการใช้งาน</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <!-- Add the d-lg-none class to hide on lg screens -->
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#collapseMenu"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseMenu"
+                >เอกสารและข้อตกลง</a
+              >
+            </li>
+            <div class="collapse navbar-collapse" id="collapseMenu">
+              <div class="nav" id="v-pills-tab" role="tablist">
+                <li class="nav-item d-lg-none">
+                  <a
+                    class="nav-link"
+                    id="manual-tab-header"
+                    data-bs-toggle="pill"
+                    data-bs-target="#manual"
+                    type="button"
+                    role="tab"
+                    aria-controls="manual"
+                    aria-selected="true"
+                    onclick="scrollToElement(event, 'manual')"
+                    style="margin-left: 10px"
+                    >คู่มือการใช้งานแอปพลิเคชัน</a
+                  >
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a
+                    class="nav-link"
+                    id="rule-tab-header"
+                    data-bs-toggle="pill"
+                    data-bs-target="#rule"
+                    type="button"
+                    role="tab"
+                    aria-controls="rule"
+                    aria-selected="false"
+                    onclick="scrollToElement(event, 'rule')"
+                    style="margin-left: 10px"
+                    >ข้อกำหนดและเงื่อนไข</a
+                  >
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a
+                    class="nav-link"
+                    id="private-tab-header"
+                    data-bs-toggle="pill"
+                    data-bs-target="#private"
+                    type="button"
+                    role="tab"
+                    aria-controls="private"
+                    aria-selected="false"
+                    onclick="scrollToElement(event, 'private')"
+                    style="margin-left: 10px"
+                    >นโยบายความเป็นส่วนตัว</a
+                  >
+                </li>
+              </div>
             </div>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link" href="manual1.html">เอกสารและข้อตกลง</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">ติดต่อเรา</a>
+            </li>
+          </ul>
+          <!-- right login-->
+          <form class="d-flex my-4 my-lg-0 ms-4 ms-lg-0" role="search">
+            <a href="https://insureweb.infuse.co.th/login" target="_blank">
+              <button
+                type="button"
+                class="btn btn-outline-success"
+                style="
+                  border-radius: 10px;
+                  width: 125px;
+                  height: 40px;
+                  padding: 5px;
+                "
+              >
+                เข้าสู่ระบบ
+              </button>
+            </a>
+          </form>
         </div>
+      </div>
     </nav>
 
     <!-- ========================= Hero section =========================== -->
     <section id="hero">
-        <!-- Welcome Section ==== how about try card container-->
-        <div class="card" id="welcome">
-            <img src="picture/Hero_BG.svg" alt="card-img" />
-            <div class="container card-body card-img-overlay p-5">
-                <img src="picture/logo มะลิซ้อน/Artboard 4@4x.png" width="20%" />
-                <h1 style="font-size: 1.5em" class="card-title">มะลิซ้อน</h1>
-                <p class="card-text">TGIA X FARMFEED</p>
-            </div>
+      <!-- Welcome Section ==== how about try card container-->
+      <div class="card" id="welcome">
+        <img src="picture/Hero_BG.svg" alt="card-img" />
+        <div class="container card-body card-img-overlay p-5">
+          <img src="picture/logo มะลิซ้อน/Artboard 4@4x.png" width="20%" />
+          <h1 style="font-size: 1.5em" class="card-title">มะลิซ้อน</h1>
+          <p class="card-text">TGIA X FARMFEED</p>
         </div>
-        <!-- video & description Section -->
-        <div class="container" id="desc">
-            <div class="row">
-                <div class="col-xl-7 col-lg-12 p-5">
-                    <p style="font-size: 1.5em">
-                        แอปพลิเคชันที่ช่วยเหลือเกษตรกรที่ประสบภัยพิบัติแต่ไม่ได้อยู่
-                        ในพื้นที่ที่ประกาศภัยพิบัติโดยช่วยลดขั้นตอนและลดระยะเวลา
-                        ในการแจ้งรายงานความเสียหาย ซึ่งโมบายแอปพลิเคชัน
-                        จะใช้เก็บข้อมูลเกษตรกร รูปภาพความเสียหายจากเหตุภัยพิบัติ
-                        ตำแหน่งของสถานที่ประสบภัยทั้งนี้ยังช่วยให้หน่วยงาน
-                        ที่เกี่ยวข้องสามารถตรวจสอบข้อมูลและดำเนินการช่วยเหลือ
-                        เกษตรที่ประสบภัยได้อย่างครอบคลุม
-                    </p>
-                    <article class="row">
-                            <a href="#footer" class="col-md-5 col-sm-12">
-                                <button type="button" class="btn btn-success m-3"
-                                style="--bs-btn-padding-y: 0.75rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.75rem; border-radius: 20px; width: 230px;">
-                                    ดาวน์โหลด
-                                </button>
-                            </a>
-                            <!-- <a href="#footer" class="col-lg-6 col-md-12">
+      </div>
+      <!-- video & description Section -->
+      <div class="container" id="desc">
+        <div class="row">
+          <div class="col-xl-7 col-lg-12 p-5">
+            <p style="font-size: 1.5em">
+              แอปพลิเคชันที่ช่วยเหลือเกษตรกรที่ประสบภัยพิบัติแต่ไม่ได้อยู่
+              ในพื้นที่ที่ประกาศภัยพิบัติโดยช่วยลดขั้นตอนและลดระยะเวลา
+              ในการแจ้งรายงานความเสียหาย ซึ่งโมบายแอปพลิเคชัน
+              จะใช้เก็บข้อมูลเกษตรกร รูปภาพความเสียหายจากเหตุภัยพิบัติ
+              ตำแหน่งของสถานที่ประสบภัยทั้งนี้ยังช่วยให้หน่วยงาน
+              ที่เกี่ยวข้องสามารถตรวจสอบข้อมูลและดำเนินการช่วยเหลือ
+              เกษตรที่ประสบภัยได้อย่างครอบคลุม
+            </p>
+            <article class="row">
+              <a href="#footer" class="col-md-5 col-sm-12">
+                <button
+                  type="button"
+                  class="btn btn-success m-3"
+                  style="
+                    --bs-btn-padding-y: 0.75rem;
+                    --bs-btn-padding-x: 1rem;
+                    --bs-btn-font-size: 1.75rem;
+                    border-radius: 20px;
+                    width: 230px;
+                  "
+                >
+                  ดาวน์โหลด
+                </button>
+              </a>
+              <!-- <a href="#footer" class="col-lg-6 col-md-12">
                               <button type="button" class="btn btn-outline-success m-3"
                               style="--bs-btn-padding-y: 0.75rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.75rem; border-radius: 20px; width: 250px; ">
                                   วิธีการใช้งาน
                               </button>
                             </a> -->
-                            <a href="#footer" class="col-md-5 col-sm-12">
-                                <button type="button" class="btn btn-outline-success m-3" 
-                                style="--bs-btn-padding-y: 0.75rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.75rem; border-radius: 20px; width: 230px; ">
-                                    วิธีการใช้งาน
-                                </button>
-                            </a>
-                    </article>
-                </div>
-                <div class="col-xl-5 col-lg-12 my-auto">
-                    <!-- finding best way to put video like original website ? -->
-                    <div id="video_promoting">
-                        <iframe width="100%" height="100%"
-                            src="video/farminsure_landing.mp4" title="video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                            >
-                        </iframe>
-                    </div>
-                    <br>
-                </div>
+              <a href="usage.html" class="col-md-5 col-sm-12">
+                <button
+                  type="button"
+                  class="btn btn-outline-success m-3"
+                  style="
+                    --bs-btn-padding-y: 0.75rem;
+                    --bs-btn-padding-x: 1rem;
+                    --bs-btn-font-size: 1.75rem;
+                    border-radius: 20px;
+                    width: 230px;
+                  "
+                >
+                  วิธีการใช้งาน
+                </button>
+              </a>
+            </article>
+          </div>
+          <div class="col-xl-5 col-lg-12 my-auto">
+            <!-- finding best way to put video like original website ? -->
+            <div id="video_promoting">
+              <iframe
+                width="100%"
+                height="100%"
+                src="video/farminsure_landing.mp4"
+                title="video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              >
+              </iframe>
             </div>
+            <br />
+          </div>
         </div>
+      </div>
     </section>
 
-    <br>
-
+    <br />
 
     <!-- =============================== content =========================== -->
     <section>
-        <!-- intro card group-->
-        <article class="container">
-            <br />
-            <h1 style="text-align: center" class="my-5">
-                มาทำความรู้จักแอปพลิเคชั่น
-            </h1>
-            <div class="row">
-                <div class="col-md-4" id="first_box">
-                    <div class="border-success intro_card p-1 mx-auto">
-                        <img src="picture/logo มะลิซ้อน/Artboard 4@4x.png" class="mx-auto mt-2" width="90vw" height="90vw"
-                            class="d-inline-block" />
-                        <h5 class="mt-2" style="font-size: 1.2em;">วาดขอบแปลง</h5>
-                        <p class="mt-2">วาดแปลงที่ได้รับความเสียหาย</p>
-                    </div>
-                </div>
-                <div class="col-md-4" id="mid_box">
-                    <div class="border-success intro_card p-1 mx-auto">
-                        <img src="picture/logo มะลิซ้อน/Artboard 4@4x.png" class="mx-auto mt-2" width="90vw" height="90vw"
-                            class="d-inline-block" />
-                        <h5 class="mt-2" style="font-size: 1.2em;">แจ้งความเสียหายแปลง</h5>
-                        <p>แจ้งรายงานความเสียหายที่ได้รับ</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4" id="last_box">
-                    <div class="border-success intro_card p-1 mx-auto">
-                        <img src="picture/logo มะลิซ้อน/Artboard 4@4x.png" class="mx-auto mt-2" width="90vw" height="90vw"
-                            class="d-inline-block" />
-                        <h5 class="mt-2" style="font-size: 1.2em;">ถ่ายภาพความเสียหาย</h5>
-                        <p>แนบภาพถ่ายแปลงที่ได้รับความเสียหาย</p>
-                    </div>
-                </div>
+      <!-- intro card group-->
+      <article class="container">
+        <br />
+        <h1 style="text-align: center" class="my-5">
+          มาทำความรู้จักแอปพลิเคชั่น
+        </h1>
+        <div class="row">
+          <div class="col-md-4" id="first_box">
+            <div class="border-success intro_card p-1 mx-auto">
+              <img
+                src="picture/logo มะลิซ้อน/Artboard 4@4x.png"
+                class="mx-auto mt-2"
+                width="90vw"
+                height="90vw"
+                class="d-inline-block"
+              />
+              <h5 class="mt-2" style="font-size: 1.2em">วาดขอบแปลง</h5>
+              <p class="mt-2">วาดแปลงที่ได้รับความเสียหาย</p>
             </div>
-        </article>
-
-        <br>
-        <br>
-
-        <!-- ============================ 3step phone part ======================= -->
-        <article class="container">
-            <div class="row">
-                <!-- phone img -->
-                <div class="col-md-6 col-sm-12" style="display: flex; justify-content: center;">
-                    <img src="picture/phone_landing.svg" class="mx-auto d-block" width="320px" />
-                </div>
-                <div class="col-md-6 col-sm-12 m-auto" id="Step_Landingpage">
-                    <br>
-                    <h1 style="font-size: 0.75em">
-                        3 ขั้นตอนง่ายๆแจ้งรายงานความเสียหาย
-                    </h1>
-                    <p style="font-size: 0.4em; opacity: 90%;">
-                        เรียนรู้วิธีการใช้งานง่ายๆเพียงคลิ๊ก...
-                    </p>
-                    <a href="#footer">
-                        <button type="button" class="btn btn-success mt-2"
-                        style="--bs-btn-padding-y: 0.75rem; --bs-btn-padding-x: 0.75rem; --bs-btn-font-size: 1.2rem; border-radius: 20px; width: 250px; ">
-                            เรียนรู้วิธีการใช้งานกันเลย!
-                        </button>
-                    </a>
-                </div>
+          </div>
+          <div class="col-md-4" id="mid_box">
+            <div class="border-success intro_card p-1 mx-auto">
+              <img
+                src="picture/logo มะลิซ้อน/Artboard 4@4x.png"
+                class="mx-auto mt-2"
+                width="90vw"
+                height="90vw"
+                class="d-inline-block"
+              />
+              <h5 class="mt-2" style="font-size: 1.2em">แจ้งความเสียหายแปลง</h5>
+              <p>แจ้งรายงานความเสียหายที่ได้รับ</p>
             </div>
-        </article>
+          </div>
 
-        <br>
-        <br>
-
-        <!-- ============================ คำถามที่พบบ่อย =======================-->
-        <div style="background-color: rgba(240, 240, 240, 0.973);">
-            <article class="container">
-                <div class="my-5">
-                    <br>
-                    <br>
-                    <h1 style="text-align: center; font-weight: bold;">คำถามที่พบบ่อย</h1>
-                    <br>
-                    <br>
-
-                    <!-- dropdown menu -->
-                    <div class="container">
-                        <div class="accordion" id="faqAccordion">
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="question1">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#answer1">
-                                        ดาวน์โหลดแอป "มะลิซ้อน" ได้ที่ไหน ?
-                                    </button>
-                                </h2>
-                                <div id="answer1" class="accordion-collapse collapse" aria-labelledby="question1">
-                                    <div class="accordion-body">
-                                        <p>สามารถดาวน์โหลดระบบ iOS และ Android ได้
-                                            <a href="#footer">ที่นี่</a>
-                                        </p>
-                                        <p>หรือค้นหาคำว่า “ มะลิซ้อน ” ใน iTunes Store และ Google Store</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="question2">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#answer2">
-                                        วิธีการวาดแปลงมะลิซ้อนทำอย่างไร ?
-                                    </button>
-                                </h2>
-                                <div id="answer2" class="accordion-collapse collapse" aria-labelledby="question2">
-                                    <div class="accordion-body">
-                                        <p>ท่านสามารถอ่านวิธีการวาดแปลงแบบละเอียดได้ 
-                                            <a href="#">ที่นี่</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="question3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#answer3">
-                                        วิธีการแจ้งรายงานความเสียหายทำอย่างไร ?
-                                    </button>
-                                </h2>
-                                <div id="answer3" class="accordion-collapse collapse" aria-labelledby="question2">
-                                    <div class="accordion-body">
-                                        <p>ท่านสามารถอ่านวิธีการการแจ้งรายงานความเสียหายแบบละเอียดได้
-                                            <a href="#">ที่นี่</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="question4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#answer4">
-                                        ภาพถ่ายที่แนบในรายงานความเสียหายควรเป็นอย่างไร ?
-                                    </button>
-                                </h2>
-                                <div id="answer4" class="accordion-collapse collapse" aria-labelledby="question2">
-                                    <div class="accordion-body">
-                                        <p>ท่านสามารถอ่านวิธีการการแจ้งรายงานความเสียหายแบบละเอียดได้
-                                            <a href="#">ที่นี่</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <br>
-                    <br>
-                </div>
-            </article>
+          <div class="col-md-4" id="last_box">
+            <div class="border-success intro_card p-1 mx-auto">
+              <img
+                src="picture/logo มะลิซ้อน/Artboard 4@4x.png"
+                class="mx-auto mt-2"
+                width="90vw"
+                height="90vw"
+                class="d-inline-block"
+              />
+              <h5 class="mt-2" style="font-size: 1.2em">ถ่ายภาพความเสียหาย</h5>
+              <p>แนบภาพถ่ายแปลงที่ได้รับความเสียหาย</p>
+            </div>
+          </div>
         </div>
+      </article>
+
+      <br />
+      <br />
+
+      <!-- ============================ 3step phone part ======================= -->
+      <article class="container">
+        <div class="row">
+          <!-- phone img -->
+          <div
+            class="col-md-6 col-sm-12"
+            style="display: flex; justify-content: center"
+          >
+            <img
+              src="picture/phone_landing.svg"
+              class="mx-auto d-block"
+              width="320px"
+            />
+          </div>
+          <div class="col-md-6 col-sm-12 m-auto" id="Step_Landingpage">
+            <br />
+            <h1 style="font-size: 0.75em">
+              3 ขั้นตอนง่ายๆแจ้งรายงานความเสียหาย
+            </h1>
+            <p style="font-size: 0.4em; opacity: 90%">
+              เรียนรู้วิธีการใช้งานง่ายๆเพียงคลิ๊ก...
+            </p>
+            <a href="#footer">
+              <button
+                type="button"
+                class="btn btn-success mt-2"
+                style="
+                  --bs-btn-padding-y: 0.75rem;
+                  --bs-btn-padding-x: 0.75rem;
+                  --bs-btn-font-size: 1.2rem;
+                  border-radius: 20px;
+                  width: 250px;
+                "
+              >
+                เรียนรู้วิธีการใช้งานกันเลย!
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <br />
+      <br />
+
+      <!-- ============================ คำถามที่พบบ่อย =======================-->
+      <div style="background-color: rgba(240, 240, 240, 0.973)">
+        <article class="container">
+          <div class="my-5">
+            <br />
+            <br />
+            <h1 style="text-align: center; font-weight: bold">
+              คำถามที่พบบ่อย
+            </h1>
+            <br />
+            <br />
+
+            <!-- dropdown menu -->
+            <div class="container">
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="question1">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#answer1"
+                    >
+                      ดาวน์โหลดแอป "มะลิซ้อน" ได้ที่ไหน ?
+                    </button>
+                  </h2>
+                  <div
+                    id="answer1"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="question1"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        สามารถดาวน์โหลดระบบ iOS และ Android ได้
+                        <a href="#footer">ที่นี่</a>
+                      </p>
+                      <p>
+                        หรือค้นหาคำว่า “ มะลิซ้อน ” ใน iTunes Store และ Google
+                        Store
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="question2">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#answer2"
+                    >
+                      วิธีการวาดแปลงมะลิซ้อนทำอย่างไร ?
+                    </button>
+                  </h2>
+                  <div
+                    id="answer2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="question2"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        ท่านสามารถอ่านวิธีการวาดแปลงแบบละเอียดได้
+                        <a href="#">ที่นี่</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="question3">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#answer3"
+                    >
+                      วิธีการแจ้งรายงานความเสียหายทำอย่างไร ?
+                    </button>
+                  </h2>
+                  <div
+                    id="answer3"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="question2"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        ท่านสามารถอ่านวิธีการการแจ้งรายงานความเสียหายแบบละเอียดได้
+                        <a href="#">ที่นี่</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="question4">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#answer4"
+                    >
+                      ภาพถ่ายที่แนบในรายงานความเสียหายควรเป็นอย่างไร ?
+                    </button>
+                  </h2>
+                  <div
+                    id="answer4"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="question2"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        ท่านสามารถอ่านวิธีการการแจ้งรายงานความเสียหายแบบละเอียดได้
+                        <a href="#">ที่นี่</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <br />
+          </div>
+        </article>
+      </div>
     </section>
 
-
     <!-- ========================== Footer======================= -->
-    <footer id="footer">
-        <p class="text-center text-light bg-black">&copy;2023 Infuse</p>
-    </footer>
-</body>
+    <footer class="bg-light text-dark pt-5 pb-4" id="footer">
+      <div class="container text-md-left">
+        <div class="row text-md-left">
+          <!-- =============================SECTION เกี่ยวกับเรา================================ -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+            <h5 class="mb-4 font-weight-bold text-black">เกี่ยวกับเรา</h5>
+            <p>
+              บริษัท อินฟิวส์ จำกัด
+              เป็นบริษัทที่ก่อตั้งขึ้นโดยทําธุรกิจให้บริการจัดการข้อมูลสารสนเทศและพัฒนาระบบวิเคราะห์ข้อมูลเชิงพื้นที่ต่างๆ
+              โดยเน้นการวิจัย และการรับโจทย์ปัญหาเพื่อพัฒนาหาแนวทางแก้ไข
+            </p>
+          </div>
+          <!-- =============================SECTION ลิ้งก์ที่เกี่ยวข้อง================================ -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="mb-4 font-weight-bold text-black">
+              ลิ้งก์ที่เกี่ยวข้อง
+            </h5>
+            <p>
+              <a
+                href="https://www.infuse.co.th"
+                class="text-black text-decoration"
+                >infuse</a
+              >
+            </p>
+          </div>
 
+          <!-- =============================SECTION ดาวน์โหลด================================ -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="mb-4 font-weight-bold text-black">ดาวน์โหลด</h5>
+            <p>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.infuse.farminsure&hl=en-TH"
+                class="text-black"
+                target="_blank"
+                style="text-decoration: none"
+                ><img
+                  src="picture/android.png"
+                  class="mx-4"
+                  width="30px"
+                  height="30px"
+                />
+                Android : Play store</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://apps.apple.com/th/app/%E0%B8%A1%E0%B8%B0%E0%B8%A5-%E0%B8%8B-%E0%B8%AD%E0%B8%99/id1506247136"
+                class="text-black"
+                style="text-decoration: none"
+                ><img
+                  src="picture/app-store.png"
+                  class="mx-4"
+                  width="30px"
+                  height="30px"
+                />Ios : Appstore</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-item-center">
+          <div class="text-center">
+            <p>
+              ©2023
+              <strong>infuse</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
