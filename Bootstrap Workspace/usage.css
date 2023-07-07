@@ -13,15 +13,10 @@ html{
 .Report1{
     width: 400px;
 }
-/* <!-- =============================SECTION ข้อมูลเพิ่มเติม================================ --> */
-.con4{
-    margin: auto;
-    padding: 0px 100px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.info1{
+    margin: 0 auto;
 }
+/* <!-- =============================SECTION ข้อมูลเพิ่มเติม================================ --> */
 .textbtn{
     color: rgb(0, 0, 0);
     text-decoration: none;
