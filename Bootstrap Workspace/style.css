@@ -8,16 +8,6 @@
   height: 400px;
   width: 100%;
 }
-.navbar-brand {
-  font-size: 2rem;
-  color: black;
-  /* font-family: 'Anuphan', sans-serif; */
-  /* font-family: 'IBM Plex Sans Thai', sans-serif; */
-}
-.nav-item {
-  font-weight: 500;
-  padding-left: 35px;
-}
 #welcome {
   font-weight: bolder;
   font-size: 4vw;
