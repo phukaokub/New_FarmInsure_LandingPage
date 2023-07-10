@@ -11,9 +11,12 @@
 #welcome {
   font-weight: bolder;
   font-size: 4vw;
-  /* background-image: url(picture/Hero_BG.svg) */
-  /* width: 100vw; */
-  /* height: 50vw; */
+  background-image: url(picture/Hero_BG.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 50vw;
   /* 1440 x 720 is default so height follow the width of device*/
 }
 .intro_card {
@@ -125,14 +128,7 @@
 .nav {
   color: #757575;
 }
-#welcome {
-  font-weight: bolder;
-  font-size: 4vw;
-  /* background-image: url(picture/Hero_BG.svg) */
-  /* width: 100vw; */
-  /* height: 50vw; */
-  /* 1440 x 720 is default so height follow the width of device*/
-}
+
 .intro_card {
   width: 220px;
   height: 220px;
